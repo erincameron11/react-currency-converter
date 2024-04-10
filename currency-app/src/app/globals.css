@@ -6,8 +6,6 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 56, 51, 107;
   --background-end-rgb: 106, 97, 176;
-  /* --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255; */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -37,11 +35,13 @@ body {
 /* CURRENCY WRAPPER */
 .title {
   color: white;
+  text-shadow: 2px 2px #342953;
   font-size: 34px;
   text-align: center;
+  font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
 }
 
-.logo {
+/* .logo {
   margin: 20px auto 55px auto;
   width: 140px;
   height: 140px;
@@ -49,6 +49,22 @@ body {
   background-size: 100px;
   border-radius: 50%;
   border: 1px solid white;
+} */
+
+.logoBackground {
+  margin: 20px auto 55px auto;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background-color: white;
+  filter: drop-shadow(5px 5px 4px #342953);
+}
+
+.logoImage {
+  width: 140px;
+  height: 140px;
+  background: url(../../public/logo.png) no-repeat center;
+  background-size: 100px;
 }
 
 .wrapper {
@@ -56,6 +72,7 @@ body {
   padding: 40px;
   border-radius: 10px;
   width: 90%;
+  filter: drop-shadow(5px 5px 4px #342953);
 }
 
 

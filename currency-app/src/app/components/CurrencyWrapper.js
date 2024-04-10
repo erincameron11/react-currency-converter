@@ -9,7 +9,10 @@ export const CurrencyWrapper = () => {
         <div className="wrapper">
             <h1 className="title">Currency Converter</h1>
             {/* <img className="logo" src={logo} alt="Currency Logo" /> */}
-            <div className="logo" />
+            {/* <div className="logo" /> */}
+            <div className="logoBackground">
+                <div className="logoImage" />
+            </div>
             <CurrencyForm/>
             <CurrencyResult />
         </div>
