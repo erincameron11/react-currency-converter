@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { CurrencyWrapper } from "./components/CurrencyWrapper"
 
 export default function Home() {

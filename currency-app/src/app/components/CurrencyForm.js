@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
@@ -23,7 +24,7 @@ export const CurrencyForm = () => {
         <form>
             {/* <input placeholder="eg. CAD" onChange={handleFromEntered}/>
             <input placeholder="eg. USD" onChange={handleToEntered}/> */}
-            <input placeholder="eg. CAD"/>
+            <input placeholder="eg. CAD" onChange={handleFromEntered}/>
             <FontAwesomeIcon className="arrow" icon={faArrowRight} />
             <input placeholder="eg. USD"/>
             <button type="submit">Convert</button>
