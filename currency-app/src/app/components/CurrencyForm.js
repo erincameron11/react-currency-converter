@@ -1,4 +1,6 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 export const CurrencyForm = () => {
     // Function to handle submitting the currency form
@@ -22,6 +24,7 @@ export const CurrencyForm = () => {
             {/* <input placeholder="eg. CAD" onChange={handleFromEntered}/>
             <input placeholder="eg. USD" onChange={handleToEntered}/> */}
             <input placeholder="eg. CAD"/>
+            <FontAwesomeIcon className="arrow" icon={faArrowRight} />
             <input placeholder="eg. USD"/>
             <button type="submit">Convert</button>
         </form>

@@ -34,6 +34,61 @@ body {
   }
 }
 
+/* CURRENCY WRAPPER */
 .title {
-  columns: white;
+  color: white;
+  font-size: 34px;
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.wrapper {
+  background-color: #686cbc;
+  padding: 40px;
+  border-radius: 10px;
+  width: 90%;
+}
+
+
+/* CURRENCY FORM */
+form {
+  display: flex;
+  align-items: center;
+  margin-bottom: 45px;
+}
+
+input {
+  border-radius: 5px;
+  width: 150px;
+  padding-left: 5px;
+  height: 42px;
+  background: none;
+  border: 2px solid #342953;
+  color: white;
+}
+
+input::placeholder {
+  color: #D3D3D3;
+}
+
+.arrow {
+  height: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  border-radius: 10px;
+  background-color: #342953;
+  margin-left: 10px;
+  color: white;
+}
+
+button:hover {
+  background-color: #1e1240;
+}
+
+button:active {
+  background-color: #342953;
 }
