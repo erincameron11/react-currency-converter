@@ -41,16 +41,6 @@ body {
   font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
 }
 
-/* .logo {
-  margin: 20px auto 55px auto;
-  width: 140px;
-  height: 140px;
-  background: url(../../public/logo.png) no-repeat center;
-  background-size: 100px;
-  border-radius: 50%;
-  border: 1px solid white;
-} */
-
 .logoBackground {
   margin: 20px auto 55px auto;
   width: 140px;
@@ -86,7 +76,6 @@ form {
 
 input {
   border-radius: 5px;
-  width: 200px;
   padding-left: 5px;
   height: 42px;
   background: none;
@@ -96,6 +85,14 @@ input {
 
 input::placeholder {
   color: #D3D3D3;
+}
+
+.currencyCountry {
+  width: 80px;
+}
+
+.currency {
+  width: 150px;
 }
 
 .arrow {

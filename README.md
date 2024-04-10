@@ -23,13 +23,16 @@ Users are able to:
 
 
 ## References
-<a href="https://www.flaticon.com/free-icons/currency" title="currency icons">Currency icons created by Freepik - Flaticon</a>
+* <a href="https://www.flaticon.com/free-icons/currency" title="currency icons">Currency icons created by Freepik - Flaticon</a>
 
 
-## Created
+## App Initialization
 1. Created new repo on GitHub.
 2. Cloned the repo, and navigated into the folder.
 3. Ran the command `npx create-next-app@latest` from this [reference documentation](https://react.dev/learn/start-a-new-react-project), and selected `Yes` to `Typescript`, `ESLint`, `Tailwind CSS`, `'src/' directory`, and `App Router`. Selected `No` for customizing import aliases.
-
+4. Installed FontAwesome:
+    * `npm i --save @fortawesome/fontawesome-svg-core`
+    * `npm i --save @fortawesome/free-solid-svg-icons`
+    * `npm i --save @fortawesome/react-fontawesome@latest`
 
 [Ref](https://www.youtube.com/watch?v=LoYbN6qoQHA)
