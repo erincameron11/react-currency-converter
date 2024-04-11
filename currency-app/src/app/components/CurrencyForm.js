@@ -63,7 +63,6 @@ export const CurrencyForm = () => {
             <input className="currency" placeholder="0.73" value={currencyTwo} readOnly />
             <input className="currencyCountry" placeholder="eg. USD" onChange={handleCountryTwo} value={countryTwo} required/>
             <button type="submit">Convert</button>
-            {/* <p>{countryOne}</p> */}
         </form>
         
     );
