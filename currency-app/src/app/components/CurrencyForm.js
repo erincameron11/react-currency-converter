@@ -1,62 +1,70 @@
-'use client'
-import React, { useState } from 'react'
+"use client"
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 export const CurrencyForm = () => {
     // Add state to the component
-    const [currency, setCurrency] = useState(1.00);
-    const [secondCurrency, setSecondCurrency] = useState(0.73);
-    const [countryFirst, setFirstCountry] = useState("");
-    const [countrySecond, setSecondCountry] = useState("");
+    const [currencyOne, setCurrencyOne] = useState();
+    const [currencyTwo, setCurrencyTwo] = useState();
+    const [countryOne, setCountryOne] = useState("");
+    const [countryTwo, setCountryTwo] = useState("");
+
+    // Define variables
+    var rate = 0;
+    var total = 0;
 
     // Function to handle submitting the currency form
     const handleConvert = e => {
         // Prevent the page from reloading
         e.preventDefault();
 
+        // Define the API url
+        let url = `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${countryOne}.json`;
         
+        // Fetch the url data
+        return fetch(url)
+        .then (response => response.json())
+        .then ((data) => {
+            // Locate the rate for conversion
+            rate = data[countryOne][countryTwo];
+            // Calculate the total
+            total = (currencyOne * rate).toFixed(2);
+            // Set the second currency
+            setCurrencyTwo(total);
+        });        
     }
 
-    // Function to handle the To-Currency entered text
-    const handleFirstCurrency = e => {
+    // Function to handle the first Currency entered text
+    const handleCurrencyOne = e => {
         // Set the currency state
-        setCurrency(e.target.value)
+        setCurrencyOne(e.target.value);
     }
 
-    // Function to handle the To-Currency entered text
-    const handleFirstCountry = e => {
+    // Function to handle the first Currency entered text
+    const handleCountryOne = e => {
         // Set the first country state
-        setFirstCountry(e.target.value)
+        setCountryOne(e.target.value);
     }
 
-    // Function to handle the From-Currency entered text
-    const handleSecondCurrency = e => {
-        // Info should auto-populate from API
-        // calculate
-        var rate = 0.73
-        var total = currency * rate
-        setSecondCurrency(total)
-        console.log(total)
-    }
-
-    // Function to handle the From-Currency entered text
-    const handleSecondCountry = e => {
+    // Function to handle the second Currency entered text
+    const handleCountryTwo = e => {
         // Set the second country state
-        setSecondCountry(e.target.value)
+        setCountryTwo(e.target.value);
     }
 
-
-    return(
+    return (
         <form onSubmit={handleConvert}>
-            <input className="currency" pattern="\d{1,9}\.?\d{2}?" onChange={handleFirstCurrency} value={currency} required/>
-            <input className="currencyCountry" placeholder="eg. CAD" onChange={handleFirstCountry} value={countryFirst} required/>
+            <input className="currency" placeholder="1.00" pattern="\d{1,9}\.?\d{2}?" onChange={handleCurrencyOne} value={currencyOne} required/>
+            <input className="currencyCountry" placeholder="eg. CAD" onChange={handleCountryOne} value={countryOne} required/>
             
             <FontAwesomeIcon className="arrow" icon={faArrowRight} />
             
-            <input className="currency" onChange={handleFirstCurrency} value={secondCurrency} readOnly />
-            <input className="currencyCountry" placeholder="eg. USD" onChange={handleSecondCountry} value={countrySecond} required/>
-            <button type="submit" onClick={handleSecondCurrency}>Convert</button>
+            <input className="currency" placeholder="0.73" value={currencyTwo} readOnly />
+            <input className="currencyCountry" placeholder="eg. USD" onChange={handleCountryTwo} value={countryTwo} required/>
+            <button type="submit">Convert</button>
+            {/* <p>{countryOne}</p> */}
         </form>
+        
     );
-}
+};
