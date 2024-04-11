@@ -42,7 +42,7 @@ body {
 }
 
 .logoBackground {
-  margin: 20px auto 55px auto;
+  margin: 20px auto 75px auto;
   width: 140px;
   height: 140px;
   border-radius: 50%;
@@ -116,4 +116,11 @@ button:hover {
 
 button:active {
   background-color: #342953;
+}
+
+.output {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
 }
