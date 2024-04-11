@@ -1,7 +1,6 @@
 "use client"
 import React from 'react'
 import { CurrencyForm } from "./CurrencyForm"
-import { CurrencyResult} from "./CurrencyResult"
 import logo from '../../../public/logo.png';
 
 export const CurrencyWrapper = () => {
