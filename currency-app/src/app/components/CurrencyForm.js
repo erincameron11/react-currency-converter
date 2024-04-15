@@ -21,7 +21,7 @@ export const CurrencyForm = () => {
         e.preventDefault();
 
         // Define the API url
-        let url = `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${countryOne}.json`;
+        var url = `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${countryOne}.json`;
         
         // Fetch the url data
         return fetch(url)
