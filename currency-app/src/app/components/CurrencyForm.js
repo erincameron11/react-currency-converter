@@ -52,6 +52,8 @@ export const CurrencyForm = () => {
     const handleCurrencyOne = e => {
         // Set the currency state
         setCurrencyOne(e.target.value);
+        // Clear the placeholder on currencyTwo
+        document.getElementById("currTwo").placeholder = "";
     }
 
     // Function to handle the first Currency entered text
@@ -74,7 +76,7 @@ export const CurrencyForm = () => {
             
             <FontAwesomeIcon className="arrow" icon={faArrowRight} />
             
-            <input className="currency" placeholder="0.73" value={currencyTwo} readOnly />
+            <input className="currency" id="currTwo" placeholder="0.73" value={currencyTwo} readOnly />
             <input className="currencyCountry" placeholder="eg. USD" onChange={handleCountryTwo} value={countryTwo} required/>
             <button type="submit">Convert</button>
         </form>
